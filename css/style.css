@@ -1,7 +1,7 @@
 body{
-    background: rgb(0, 0, 0, .9);
+    background: #566573;
     margin: 0;
-    color: #fff;
+    color: #000;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -44,16 +44,13 @@ body{
 }
 
 
+
 .title {
     font-family: 'Luxurious Roman', cursive;
     font-size: 2rem;
 }
 
-.titleCocora {
-    font-family: 'Luxurious Roman', cursive;
-    font-size: 2rem;
-    margin-left: 300px;
-}
+
 
 .text {
     line-height: 1.7;
@@ -68,9 +65,7 @@ body{
 }
 
 .containerG{
-    max-width: 1200px;
-    margin: auto;
-    overflow:hidden;
+   
     padding: 4rem 1rem;
 }
 

@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Pagina</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
     <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
     <!--Animate css-->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- CSS CUSTOM-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--Style de Galeria slide-->
     <style>
-       .slide {
-				position: relative;
-				box-shadow: 0px 1px 6px rgba(170, 198, 209, 0.39);
-				margin-top: 80px;
-                margin-left: 300px;
-                margin-right: 300px;
-            
-			}
+        .slide {
+            position: relative;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0);
+            margin-top: 0;
+            margin-left: 50px;
+            margin-right: 50px;
 
-			.slide-inner {
-				position: relative;
-				overflow: hidden;
-				width: 100%;
-				height: calc( 400px + 5em);
-        
-			}
+        }
 
-        .slide-open:checked + .slide-item {
+        .slide-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: calc(400px + 4em);
+
+        }
+
+        .slide-open:checked+.slide-item {
             position: static;
             opacity: 100;
         }
@@ -91,11 +96,24 @@
             color: #aaaaaa;
         }
 
-        #slide-1:checked ~ .control-1,
-        #slide-2:checked ~ .control-2,
-        #slide-3:checked ~ .control-3 {
+        #slide-1:checked~.control-1,
+        #slide-2:checked~.control-2,
+        #slide-3:checked~.control-3 {
             display: block;
         }
+
+        #slide-4:checked~.control-4,
+        #slide-5:checked~.control-5,
+        #slide-6:checked~.control-6{
+            display: block;
+        }
+
+        #slide-7:checked~.control-7,
+        #slide-8:checked~.control-8,
+        #slide-9:checked~.control-9{
+            display: block;
+        }
+
 
         .slide-indicador {
             list-style: none;
@@ -125,13 +143,22 @@
             color: #aaaaaa;
         }
 
-        #slide-1:checked ~ .control-1 ~ .slide-indicador 
-             li:nth-child(1) .slide-circulo,
-        #slide-2:checked ~ .control-2 ~ .slide-indicador 
-              li:nth-child(2) .slide-circulo,
-        #slide-3:checked ~ .control-3 ~ .slide-indicador 
-              li:nth-child(3) .slide-circulo {
-            color: #428bca;
+        #slide-1:checked~.control-1~.slide-indicador li:nth-child(1) .slide-circulo,
+        #slide-2:checked~.control-2~.slide-indicador li:nth-child(2) .slide-circulo,
+        #slide-3:checked~.control-3~.slide-indicador li:nth-child(3) .slide-circulo {
+            color: #fff;
+        }
+
+        #slide-4:checked~.control-4~.slide-indicador li:nth-child(4) .slide-circulo,
+        #slide-5:checked~.control-5~.slide-indicador li:nth-child(5) .slide-circulo,
+        #slide-6:checked~.control-6~.slide-indicador li:nth-child(6) .slide-circulo {
+            color: #fff;
+        }
+
+        #slide-7:checked~.control-7~.slide-indicador li:nth-child(7) .slide-circulo,
+        #slide-8:checked~.control-8~.slide-indicador li:nth-child(8) .slide-circulo,
+        #slide-9:checked~.control-9~.slide-indicador li:nth-child(9) .slide-circulo {
+            color: #fff;
         }
 
         #titulo {
@@ -144,179 +171,399 @@
             color: rgba(255, 255, 255, 1);
             font-family: 'Open Sans', sans-serif;
             z-index: 9999;
-            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-                 -1px 0px 2px rgba(255, 255, 255, 0);
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+                -1px 0px 2px rgba(255, 255, 255, 0);
         }
 
-        @media(max-width: 850px){
-    .slide{
-        position: relative;
-        margin: 0;
+        .titleCocora {
+            font-family: 'Luxurious Roman', cursive;
+            font-size: 2rem;
+            margin-left: 50px;
+            margin-top: 0;
+            
+        }
 
-    }
-    .slide-inner{
-        position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: calc( 200px + 5em);
-    }
-    .slide-item{
-        top: 5%;
-        margin-top: 5px;
-    }
+        .parrafoGallery {
 
-    @media(max-height: 900px){
-        .slide{
-        position: relative;
-        margin: 0;
+            font-size: 1.5rem;
+            margin-left: 50px;
+            margin-top: 0;
+            font-family: 'Alegreya', serif;
+            text-align: justify;
+           
+        }
 
-    }
-    .slide-inner{
-        position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: calc( 200px + 5em);
-    }
 
-    
-}
+        @media(max-width: 1200px) {
+            .slide {
+                position: relative;
+                margin: 0;
+
+            }
+
+            .slide-inner {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: calc(200px + 7em);
+            }
+
+            .slide-item {
+
+                margin-top: 0px;
+            }
+
+            .titleCocora {
+                font-family: 'Luxurious Roman', cursive;
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .parrafoGallery {
+
+                font-size: 1rem;
+                margin-left: 0px;
+            }
+
+            @media(max-height: 450px) {
+                .slide {
+                    position: relative;
+                    margin: 0;
+
+                }
+
+                .slide-inner {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: calc(200px +8em);
+                }
+
+                .titleCocora {
+                    font-family: 'Luxurious Roman', cursive;
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                .parrafoGallery {
+
+                    font-size: 1rem;
+                    margin-left: 0px;
+                }
+            }
+
+            @media(max-width: 800px) {
+                .slide {
+                    position: relative;
+                    margin: 0;
+
+                }
+
+                .slide-inner {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: calc(150px + 6em);
+                }
+
+                .titleCocora {
+                    font-family: 'Luxurious Roman', cursive;
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                .parrafoGallery {
+
+                    font-size: 1rem;
+                    margin-left: 0px;
+                }
+            }
+
+            @media(max-width: 560px) {
+                .slide {
+                    position: relative;
+                    margin: 0;
+
+                }
+
+                .slide-inner {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height:  calc(200px + 5em);
+                }
+
+                .titleCocora {
+                    font-family: 'Luxurious Roman', cursive;
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                .parrafoGallery {
+
+                    font-size: 1rem;
+                    margin-left: 0px;
+                }
+            }
+
+            @media(max-width: 400px) {
+                .slide {
+                    position: relative;
+                    margin: 0;
+
+                }
+
+                .slide-inner {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: calc(150px + 0.5em);
+                }
+
+                .titleCocora {
+                    font-family: 'Luxurious Roman', cursive;
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                .parrafoGallery {
+
+                    font-size: 1rem;
+                    margin-left: 0px;
+                }
+            }
+
+        }
     </style>
-
-
 </head>
+
 <body>
- 
     <!-- HEADER-->
-<header class="header">
-    <div class="header-content animate__animated animate__zoomInDown"> 
-        <img src="img/fon.png" alt="Eye Color" class="logo">
-        <h3 class="title">Galeria page</h3>
-        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum eos vitae temporibus veniam facilis quo dolorem, 
-            aperiam distinctio minus, odit est. 
-            Qui incidunt iure aperiam aut dolorem ipsum ratione aliquam?</p>
-
-    </div>
-</header>
-
-<!--Photos-->
-<section >
-   
-    <div class="slide">
-        <div class="slide-inner">
-            <input class="slide-open" type="radio" id="slide-1" 
-                  name="slide" aria-hidden="true" hidden="" checked="checked">
-            <div class="slide-item">
-                <img src="img/img01.jpg">
-            </div>
-            <input class="slide-open" type="radio" id="slide-2" 
-                  name="slide" aria-hidden="true" hidden="">
-            <div class="slide-item">
-                <img src="img/img02.jpg">
-            </div>
-            <input class="slide-open" type="radio" id="slide-3" 
-                  name="slide" aria-hidden="true" hidden="">
-            <div class="slide-item">
-                <img src="img/img03.jpg">
-            </div>
-            <label for="slide-3" class="slide-control prev control-1">‹</label>
-            <label for="slide-2" class="slide-control next control-1">›</label>
-            <label for="slide-1" class="slide-control prev control-2">‹</label>
-            <label for="slide-3" class="slide-control next control-2">›</label>
-            <label for="slide-2" class="slide-control prev control-3">‹</label>
-            <label for="slide-1" class="slide-control next control-3">›</label>
-            <ol class="slide-indicador">
-                <li>
-                    <label for="slide-1" class="slide-circulo">•</label>
-                </li>
-                <li>
-                    <label for="slide-2" class="slide-circulo">•</label>
-                </li>
-                <li>
-                    <label for="slide-3" class="slide-circulo">•</label>
-                </li>
-            </ol>
+    <header class="header">
+        <div class="header-content animate__animated animate__zoomInDown">
+            <img src="img/fon.png" alt="Eye Color" class="logo" />
+            <h3 class="title">Galeria page</h3>
+            <p class="text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum eos
+                vitae temporibus veniam facilis quo dolorem, aperiam distinctio minus,
+                odit est. Qui incidunt iure aperiam aut dolorem ipsum ratione aliquam?
+            </p>
         </div>
-    </div>
-    <div>
-        <h3 class="titleCocora">Galeria Cocora</h3>
-        <p>Lorem ipsum dolor sit .</p>
-    </div>
-</section>
+    </header>
 
+    <!--PhotosCocora-->
+    <section>
+        <div class="containerG">
+            <div class="grid-2">
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden=""
+                            checked="checked" />
+                        <div class="slide-item">
+                            <img src="img/img015.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img02.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img03.jpg" />
+                        </div>
+                        <label for="slide-3" class="slide-control prev control-1">‹</label>
+                        <label for="slide-2" class="slide-control next control-1">›</label>
+                        <label for="slide-1" class="slide-control prev control-2">‹</label>
+                        <label for="slide-3" class="slide-control next control-2">›</label>
+                        <label for="slide-2" class="slide-control prev control-3">‹</label>
+                        <label for="slide-1" class="slide-control next control-3">›</label>
+                        <ol class="slide-indicador">
+                            <li>
+                                <label for="slide-1" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="slide-circulo">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="titleCocora">Cocora</h3>
+                    <p class="parrafoGallery">Respira, observa y sé consciente de tu presente, la calma te guiará, no tengas prisa, nubla tu mente 
+                        de aquellos pensamientos que no te dejan avanzar, no te atormentes por el futuro y solo enfocate en el hoy.</p>
+                </div>
+            </div>
+    </section>
 
-<!-- Gallery-->
-<section class="gll-light">
-    <div class="container text-center">
-        <div class="grid-2">
-            <div class="center">
-                <i class="far fa-images fa-10x"></i>
+    <!--PhotosSunset-->
+    <section>
+        <div class="containerG">
+            <div class="grid-2">
+                <div>
+                    <h3 class="titleCocora">Sunset</h3>
+                    <p class="parrafoGallery">El ocaso de una gran esperanza es como el ocaso del sol:
+                         con ella se extingue el esplendor de nuestra vida.</p>
+                         <p class="parrafoGallery">El atardecer es un instante que nos puede recordar las cosas más duras que hemos podido vivir y con ello entristecernos, 
+                             pero debemos recordar que también es el prólogo del comienzo de algo nuevo.</p>
+                </div>
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-4" name="slide1" aria-hidden="true" hidden=""
+                            checked="checked" />
+                        <div class="slide-item">
+                            <img src="img/img04.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-5" name="slide1" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img05.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-6" name="slide1" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img06.jpg" />
+                        </div>
+                        <label for="slide-6" class="slide-control prev control-4">‹</label>
+                        <label for="slide-5" class="slide-control next control-4">›</label>
+                        <label for="slide-4" class="slide-control prev control-5">‹</label>
+                        <label for="slide-6" class="slide-control next control-5">›</label>
+                        <label for="slide-5" class="slide-control prev control-6">‹</label>
+                        <label for="slide-4" class="slide-control next control-6">›</label>
+                        <ol class="slide-indicador">
+                            <li>
+                                <label for="slide-4" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-5" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-6" class="slide-circulo">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+     <!--Gray World-->
+     <section>
+        <div class="containerG">
+            <div class="grid-2">
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-7" name="slide2" aria-hidden="true" hidden=""
+                            checked="checked" />
+                        <div class="slide-item">
+                            <img src="img/img07.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-8" name="slide2" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img08.jpg" />
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-9" name="slide2" aria-hidden="true" hidden="" />
+                        <div class="slide-item">
+                            <img src="img/img09.jpg" />
+                        </div>
+                        <label for="slide-9" class="slide-control prev control-7">‹</label>
+                        <label for="slide-8" class="slide-control next control-7">›</label>
+                        <label for="slide-7" class="slide-control prev control-8">‹</label>
+                        <label for="slide-9" class="slide-control next control-8">›</label>
+                        <label for="slide-8" class="slide-control prev control-9">‹</label>
+                        <label for="slide-7" class="slide-control next control-9">›</label>
+                        <ol class="slide-indicador">
+                            <li>
+                                <label for="slide-7" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-8" class="slide-circulo">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-9" class="slide-circulo">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="titleCocora">Gray World</h3>
+                    <p class="parrafoGallery">Respira, observa y sé consciente de tu presente, la calma te guiará, no tengas prisa, nubla tu mente 
+                        de aquellos pensamientos que no te dejan avanzar, no te atormentes por el futuro y solo enfocate en el hoy.</p>
+                        <button onclick="location.href='https://www.facebook.com'">Llévame a otro lado</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Gallery-->
+    <section class="gll-light">
+        <div class="container text-center">
+            <div class="grid-2">
+                <div class="center">
+                    <i class="far fa-images fa-10x"></i>
+                </div>
+                <div>
+                    <h3 class="title">Galeria por Santiago Estrada</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+                        quasi repudiandae dolorem odit. Neque ducimus odit aspernatur
+                        aliquam harum molestias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About me-->
+    <section class="gll-light">
+        <div class="container text-center">
+            <div class="grid-2">
+                <div class="center">
+                    <i class="fas fa-user-tie fa-4x"></i>
+                </div>
+                <div>
+                    <h3 class="title">Santiago Estrada</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur esse animi iste, autem illum aliquid?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section class="services text-center">
+        <h3 class="title">Services</h3>
+        <div class="container grid-3">
+            <div>
+                <i class="fab fa-youtube fa-5x"></i>
+                <h3>Youtube</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae,
+                    tempora? Nemo quisquam suscipit facilis culpa!
+                </p>
             </div>
             <div>
-                <h3 class="title">Galeria por Santiago Estrada</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Iusto quasi repudiandae dolorem odit. Neque ducimus odit 
-                    aspernatur aliquam harum molestias.</p>
-            </div>
-
-        </div>
-    </div>
-     
-</section>
-
-
-
-<!-- About me-->
-<section class="gll-light">
-    <div class="container text-center">
-        <div class="grid-2">
-            <div class="center">
-                <i class="fas fa-user-tie fa-4x"></i>
+                <i onclick="location.href='https://www.instagram.com/santy_estrada/'" class="fab fa-instagram fa-5x"></i>
+                <h3>Instagram</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae,
+                    tempora? Nemo quisquam suscipit facilis culpa!
+                </p>
             </div>
             <div>
-                <h3 class="title">Santiago Estrada</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur esse animi iste, autem illum aliquid?</p>
+                <i onclick="location.href='https://www.facebook.com/EstPhoto7/'" class="fab fa-facebook-square fa-5x"></i>
+                <h3>Facebook Page</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae,
+                    tempora? Nemo quisquam suscipit facilis culpa!
+                </p>
             </div>
-
         </div>
-    </div>
-     
-</section>
+    </section>
 
-<!-- services -->
-<section class="services text-center">
-    <h3 class="title">Services</h3>
-    <div class="container grid-3">
-        <div>
-            <i class="fab fa-youtube fa-5x"></i>
-            <h3>Youtube</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, tempora? Nemo quisquam suscipit facilis culpa!</p>
-
-        </div>
-        <div>
-            <i class="fab fa-instagram fa-5x"></i>
-            <h3>Instagram</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, tempora? Nemo quisquam suscipit facilis culpa!</p>
-            
-        </div>
-        <div>
-            <i class="fab fa-facebook-square fa-5x"></i>
-            <h3>Facebook Page</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, tempora? Nemo quisquam suscipit facilis culpa!</p>
-            
-        </div>
-    </div>
-
-</section>
-
-<!-- Footer -->
-<footer class="footer text-center gll-light">
-    <p>Photos Gallery Web &copy; 2022 - All rights reserved</p>
-
-</footer>
-
-
-
-
-    
+    <!-- Footer -->
+    <footer class="footer text-center gll-light">
+        <p>Photos Gallery Web &copy; 2022 - All rights reserved</p>
+    </footer>
 </body>
+
 </html>
